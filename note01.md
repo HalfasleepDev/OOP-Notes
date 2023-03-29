@@ -1,6 +1,6 @@
 # Object Oriented Programing Notes 1
 
-I think OOP is kewl :/
+I think OOP is kewl!
 
 ```python
 # Example class
@@ -13,6 +13,11 @@ class person:
         return f"Person Object called: {self.name}"
         
     def __repr__(self):
-        return self.__str()
+        return self.__str__()
         
 ```
+
+## Definitions
+- Encapsulation
+- Polymorphism
+- Override
