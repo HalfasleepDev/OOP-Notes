@@ -189,3 +189,124 @@ This program creates a list of palindromic numbers (numbers that are palindromes
 2. filter out the palindrome --> `filter(isPalindrome, string version of the array)`
 3. remap all values back to integers --> `map(int, palindromes)`
 4. turn the mapped integers iterable back inside a list --> `list(palindromicIterables)`
+
+</details>
+
+
+## 3. Tuples
+### What are they?
+
+To begin, strings and Lists are basic iterable data types that are very similar with key differences:
+- Strings only allow alphanumeric characters and special symbols to represent text
+- Lists allow all data types as its items/members
+- Strings are immutable whereas Lists are mutable
+These significant differences cause a headache when you require the following data structure:
+- It must be immutable
+- It must allow different datatypes as items
+- It must be iterable
+- It must be nestable (much like a list within a list)
+To solve all of these issues a data structure called `Tuple` is used.
+Example:
+```python
+tup = ('C', ' Java', 'Python')
+empty_tup = ()
+single_tup = ('Park',)
+
+print(tup)
+print(empty_tup)
+print(single_tup)
+```
+Output:
+```
+('C', ' Java', 'Python')
+()
+('Park',)
+```
+### Tuple Operators
+```python
+# Concatenation: Joining two tuples
+a = (1,2,3)
+b = (4,5,6)
+concat_result = a + b
+print('a+b:', concat_result)
+
+
+# Repetition: Repeating a list multiple times
+c = ('Hi!',)
+repet_result = c * 3
+print('c*3', repet_result)
+
+# Membership: Check if a value exists in a tuple
+d = a + b + c
+print('d:', d)
+print('\'Hi!\' in d:', 'Hi!' in d)
+print('7 in d:', 7 in d)
+```
+Output:
+```
+a+b: (1, 2, 3, 4, 5, 6)
+c*3 ('Hi!', 'Hi!', 'Hi!')
+d: (1, 2, 3, 4, 5, 6, 'Hi!')
+'Hi!' in d: True
+7 in d: False
+```
+### Tuples are Iterable, Indexable, and Sliceable
+```python
+# Iteration
+example = ('C', 'Java', 'Python', 'C#', 'JavaScript')
+
+print('Tuple example items:')
+for language in example:
+    print(language)
+print('--')
+
+# Indexing
+print('Index 1:', example[1])
+print('Last Value:', example[-1])
+
+# Slicing
+print('Backwards:', example[::-1])
+print('Every other:', example[::2])
+print('From 1 to end:', example[1:])
+print('From 1 to 3:', example[1:3])
+```
+Output:
+```
+Tuple example items:
+C
+Java
+Python
+C#
+JavaScript
+--
+Index 1: Java
+Last Value: JavaScript
+Backwards: ('JavaScript', 'C#', 'Python', 'Java', 'C')
+Every other: ('C', 'Python', 'JavaScript')
+From 1 to end: ('Java', 'Python', 'C#', 'JavaScript')
+From 1 to 3: ('Java', 'Python')
+```
+### Built-in Functions with Tuple
+```python
+
+```
+Output:
+```
+
+```
+### Tuple Comprehension
+```python
+
+```
+Output:
+```
+
+```
+### Tuple & Python: Packing and Unpacking
+```python
+
+```
+Output:
+```
+
+```
